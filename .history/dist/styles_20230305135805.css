@@ -1,0 +1,48 @@
+body, html {
+    margin:0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFD4D4;
+    height: 100px;
+    font-size: 48px;
+    font-family: 'Tilt Warp', cursive;
+    box-shadow: 0 4px 4px -2px gray;
+}
+
+#header p {
+    margin: 24px;
+    padding: 0;
+    color: #000000;
+}
+
+#projects {
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+#project {
+    background-color: #CDE990;
+    height: 200px;
+    width: 200px;
+}
+
+#add-project {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin: 48px;
+}

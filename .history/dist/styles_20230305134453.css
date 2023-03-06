@@ -1,0 +1,23 @@
+body, html {
+    margin:0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(109, 232, 119);
+    height: 100%;
+    font-size: 48px;
+    font-family: 'Tilt Warp', cursive;
+}
+
+#header p {
+    margin: 12px;
+    padding: 0;
+}
