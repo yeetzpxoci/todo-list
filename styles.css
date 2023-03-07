@@ -10,10 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Roboto';
-    background-image: url("https://miro.medium.com/max/1200/1*7Q8fiUWuXJJmSs_n9zS66g.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    backdrop-filter: blur(8px);
+    background-color: #F9F9F9;
 }
 
 p {
@@ -30,36 +27,39 @@ p {
     background-color: #ffffff;
     z-index: 0;
     overflow: hidden;
-    border-radius: 8px; 
+    border-radius: 16px; 
+    gap: 16px;
 }
 
 #header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #caf1ff;
+    background-color: #F6C6EA;
     font-size: 64px;
     font-family: 'Tilt Warp', cursive;
     grid-column: 1 / 3;
     grid-row: 1 / 2;
     z-index: 1;
+    border-radius: 16px;
 }
 
 #header p {
     margin: 24px;
     padding: 0;
-    color: #000000;
+    color: #F9F9F9;
 }
 
 #sidebar {
     display: flex;
     flex-direction: column;
-    background-color: #efefef   ;
+    background-color: #CDF0EA   ;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     z-index: -1;
     padding-left: 24px;
     padding-top: 24px;
+    border-radius: 16px;
 }
 
 #projects-div {
@@ -70,29 +70,29 @@ p {
 
 #add-project {
     align-self: flex-end;
-    border-radius: 8px;
-    border: solid;
-    height: 48px;
+    border-radius: 16px;
+    border-width: 0;
+    height: 36px;
     width: 96px;
     font-size: 12px;
     margin-top: auto;
     margin-right: 16px;
     margin-bottom: 16px;
-    background-color: #ffffff;
+    background-color: #FFF6BD;
     cursor: pointer;
 }
 
 #add-todo {
     align-self: flex-end;
-    border-radius: 8px;
-    border: solid;
-    height: 48px;
+    border-radius: 16px;
+    border-width: 0;
+    height: 36px;
     width: 96px;
     font-size: 12px;
     margin-top: auto;
     margin-bottom: 16px;
     margin-right: 16px;
-    background-color: #ffffff;
+    background-color: #CDF0EA;
     cursor: pointer;
 }
 
@@ -106,6 +106,8 @@ p {
     display: flex;  
     flex-direction: column;
     gap: 16px;
+    background-color: #FFF6BD;
+    border-radius: 16px;
 }
 
 #todos {
@@ -125,8 +127,8 @@ p {
     justify-content: space-between;
     align-items: center;
     height: 60%;
-    background-color: #efefef;
-    border-radius: 8px;
+    background-color: #CDF0EA;
+    border-radius: 16px;
     padding-left: 16px;
     padding-right: 16px;
     font-size: 20px;
@@ -142,21 +144,22 @@ p {
 
 .description {
     background-color: #caf1ff;
-    border-radius: 8px;
+    border-radius: 16px;
     border-width: 0px;
     font-size: 20px;
     padding: 4px;
     cursor: pointer;
+    background-color: transparent;
 }
 
 #description-div {
     display: none;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: #caf1ff;
+    background-color: #F9F9F9;
     width: 25%;
     height: 40%;
-    border-radius: 8px;
+    border-radius: 16px;
     padding: 16px;
     position: absolute;
     margin-left: auto;
@@ -174,6 +177,7 @@ p {
 #close-button {
     margin-top: -8px;
     margin-right: -8px;
+    font-weight: bold;
     width: 24px;
     height: 24px;
     align-self: flex-end;
@@ -188,10 +192,10 @@ p {
     align-items: center;
     gap: 8px;
     flex-wrap: wrap;
-    background-color: #caf1ff;
+    background-color: #F9F9F9;
     width: 20%;
     height: 10%;
-    border-radius: 8px;
+    border-radius: 16px;
     padding: 16px;
     position: absolute;
     margin-left: auto;
@@ -209,10 +213,10 @@ p {
     align-items: center;
     gap: 8px;
     flex-wrap: wrap;
-    background-color: #caf1ff;
+    background-color: #F9F9F9;
     width: 20%;
     height: 20%;
-    border-radius: 8px;
+    border-radius: 16px;
     padding: 16px;
     position: absolute;
     margin-left: auto;
