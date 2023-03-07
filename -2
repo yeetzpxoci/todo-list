@@ -1,0 +1,912 @@
+[33mcommit daae9ee5975bef8a2e2cfedddc66434c5de351cc[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: yeetzpxoci <yigityigin@hotmail.com>
+Date:   Mon Mar 6 19:46:35 2023 +0100
+
+    functions well
+
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..40b878d[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mnode_modules/[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/.gitignore_20230305131302 b/.history/.gitignore_20230305131302[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/.history/.gitignore_20230305131540 b/.history/.gitignore_20230305131540[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b512c09[m
+[1m--- /dev/null[m
+[1m+++ b/.history/.gitignore_20230305131540[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mnode_modules[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/.gitignore_20230305131621 b/.history/.gitignore_20230305131621[m
+[1mnew file mode 100644[m
+[1mindex 0000000..40b878d[m
+[1m--- /dev/null[m
+[1m+++ b/.history/.gitignore_20230305131621[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mnode_modules/[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305130201.html b/.history/dist/index_20230305130201.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5d052a9[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305130201.html[m
+[36m@@ -0,0 +1,14 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[41m    [m
+[32m+[m[32m<script src="script.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305131815.html b/.history/dist/index_20230305131815.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ff9bf67[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305131815.html[m
+[36m@@ -0,0 +1,14 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[41m    [m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305133510.html b/.history/dist/index_20230305133510.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f16adbd[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305133510.html[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="header">[m
+[32m+[m[32m        <p>Todo</p>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305135129.html b/.history/dist/index_20230305135129.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..dd50f52[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305135129.html[m
+[36m@@ -0,0 +1,21 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="header">[m
+[32m+[m[32m        <p>Todo</p>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <div id="projects"></div>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305135136.html b/.history/dist/index_20230305135136.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..eb6731a[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305135136.html[m
+[36m@@ -0,0 +1,23 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="header">[m
+[32m+[m[32m        <p>Todo</p>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <div id="projects">[m
+[32m+[m[41m        [m
+[32m+[m[32m    </div>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305135254.html b/.history/dist/index_20230305135254.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8c3954e[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305135254.html[m
+[36m@@ -0,0 +1,25 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="header">[m
+[32m+[m[32m        <p>Todo</p>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <div id="projects">[m
+[32m+[m[32masdasdsa[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <button id="add-project"></button>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305135256.html b/.history/dist/index_20230305135256.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f1b52a5[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305135256.html[m
+[36m@@ -0,0 +1,25 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="header">[m
+[32m+[m[32m        <p>Todo</p>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <div id="projects">[m
+[32m+[m[32m    asdasdsa[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <button id="add-project"></button>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305135300.html b/.history/dist/index_20230305135300.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1c02061[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305135300.html[m
+[36m@@ -0,0 +1,25 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="header">[m
+[32m+[m[32m        <p>Todo</p>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <div id="projects">[m
+[32m+[m[32m        asdasdsa[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <button id="add-project"></button>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305135632.html b/.history/dist/index_20230305135632.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f767057[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305135632.html[m
+[36m@@ -0,0 +1,36 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="header">[m
+[32m+[m[32m        <p>Todo</p>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <div id="projects">[m
+[32m+[m[32m        <div id="project">[m
+[32m+[m[32m            Default[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="project">[m
+[32m+[m[32m            Home[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="project">[m
+[32m+[m[32m            School[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="project">[m
+[32m+[m[32m            Work[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <button id="add-project"></button>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305135905.html b/.history/dist/index_20230305135905.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..bafbfd0[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305135905.html[m
+[36m@@ -0,0 +1,36 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="header">[m
+[32m+[m[32m        <p>Todo</p>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <div id="projects">[m
+[32m+[m[32m        <div id="project">[m
+[32m+[m[32m            <p>Default</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="project">[m
+[32m+[m[32m            Home[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="project">[m
+[32m+[m[32m            School[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="project">[m
+[32m+[m[32m            Work[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <button id="add-project"></button>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305135908.html b/.history/dist/index_20230305135908.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..402f0ba[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305135908.html[m
+[36m@@ -0,0 +1,38 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="header">[m
+[32m+[m[32m        <p>Todo</p>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <div id="projects">[m
+[32m+[m[32m        <div id="project">[m
+[32m+[m[32m            <p>Default</p>[m
+[32m+[m[32m            <p>Default</p>[m
+[32m+[m[32m            <p>Default</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="project">[m
+[32m+[m[32m            Home[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="project">[m
+[32m+[m[32m            School[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="project">[m
+[32m+[m[32m            Work[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <button id="add-project"></button>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305140022.html b/.history/dist/index_20230305140022.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..eacc688[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305140022.html[m
+[36m@@ -0,0 +1,38 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="header">[m
+[32m+[m[32m        <p>Todo</p>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <div id="projects">[m
+[32m+[m[32m        <div class="project">[m
+[32m+[m[32m            <p id="">Default</p>[m
+[32m+[m[32m            <p>Default</p>[m
+[32m+[m[32m            <p>Default</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div class="project">[m
+[32m+[m[32m            Home[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div class="project">[m
+[32m+[m[32m            School[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div class="project">[m
+[32m+[m[32m            Work[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <button id="add-project"></button>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305140400.html b/.history/dist/index_20230305140400.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1f74aa6[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305140400.html[m
+[36m@@ -0,0 +1,25 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="header">[m
+[32m+[m[32m        <p>Todo</p>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <div id="projects">[m
+[32m+[m[41m        [m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <button id="add-project"></button>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305140439.html b/.history/dist/index_20230305140439.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6627625[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305140439.html[m
+[36m@@ -0,0 +1,23 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="content">[m
+[32m+[m[32m        <div id="header">[m
+[32m+[m[32m            <p>Todo</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m    <button id="add-project"></button>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305140510.html b/.history/dist/index_20230305140510.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..095ba39[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305140510.html[m
+[36m@@ -0,0 +1,21 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="content">[m
+[32m+[m[32m        <div id="header">[m
+[32m+[m[32m            <p>Todo</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305140651.html b/.history/dist/index_20230305140651.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3325ed8[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305140651.html[m
+[36m@@ -0,0 +1,22 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="content">[m
+[32m+[m[32m        <div id="header">[m
+[32m+[m[32m            <p>Todo</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        asdasd[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305140902.html b/.history/dist/index_20230305140902.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5df55a7[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305140902.html[m
+[36m@@ -0,0 +1,20 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="content">[m
+[32m+[m[32m        <div id="header">[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305141033.html b/.history/dist/index_20230305141033.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..54f2035[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305141033.html[m
+[36m@@ -0,0 +1,21 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="content">[m
+[32m+[m[32m        <div id="header">[m
+[32m+[m[32m            Todo[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305141805.html b/.history/dist/index_20230305141805.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b8c859c[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305141805.html[m
+[36m@@ -0,0 +1,22 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="content">[m
+[32m+[m[32m        <div id="header">[m
+[32m+[m[32m            Todo[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="sidebar"></div>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305142624.html b/.history/dist/index_20230305142624.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..46c16dc[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305142624.html[m
+[36m@@ -0,0 +1,24 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="content">[m
+[32m+[m[32m        <div id="header">[m
+[32m+[m[32m            <p>Todo</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="sidebar">[m
+[32m+[m[32m            <p>Default</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305142743.html b/.history/dist/index_20230305142743.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..17786b4[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305142743.html[m
+[36m@@ -0,0 +1,25 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="content">[m
+[32m+[m[32m        <div id="header">[m
+[32m+[m[32m            <p>Todo</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="sidebar">[m
+[32m+[m[32m            <p class="project-name">Default</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305143116.html b/.history/dist/index_20230305143116.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f04c4d9[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305143116.html[m
+[36m@@ -0,0 +1,36 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="content">[m
+[32m+[m[32m        <div id="header">[m
+[32m+[m[32m            <p>Todo</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="sidebar">[m
+[32m+[m[32m            <p class="project-name">Default</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="todos">[m
+[32m+[m[32m            <p class="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </p>[m
+[32m+[m[32m            <p class="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </p>[m
+[32m+[m[32m            <p class="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305143137.html b/.history/dist/index_20230305143137.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0460fa4[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305143137.html[m
+[36m@@ -0,0 +1,42 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="content">[m
+[32m+[m[32m        <div id="header">[m
+[32m+[m[32m            <p>Todo</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="sidebar">[m
+[32m+[m[32m            <p class="project-name">Default</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="todos">[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305143144.html b/.history/dist/index_20230305143144.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..99256f1[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305143144.html[m
+[36m@@ -0,0 +1,57 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="content">[m
+[32m+[m[32m        <div id="header">[m
+[32m+[m[32m            <p>Todo</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="sidebar">[m
+[32m+[m[32m            <p class="project-name">Default</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="todos">[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305143148.html b/.history/dist/index_20230305143148.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..aa39f4e[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305143148.html[m
+[36m@@ -0,0 +1,37 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div id="content">[m
+[32m+[m[32m        <div id="header">[m
+[32m+[m[32m            <p>Todo</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="sidebar">[m
+[32m+[m[32m            <p class="project-name">Default</p>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div id="todos">[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div id="todo">[m
+[32m+[m[32m                asd[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m<script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/.history/dist/index_20230305143200.html b/.history/dist/index_20230305143200.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8622b42[m
+[1m--- /dev/null[m
+[1m+++ b/.history/dist/index_20230305143200.html[m
+[36m@@ -0,0 +1,37 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Todo List</title>[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">[m
+[32m+
