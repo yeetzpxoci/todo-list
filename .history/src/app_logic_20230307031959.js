@@ -33,9 +33,9 @@ function removeTodo (name) {
     let projects = JSON.parse(localStorage.getItem("projects"));
     for (let i = 0; i < projects.length; i++) {
         if (projects[i].name === currentProject.name) {
-            for (let j = 0; j < projects[i].todos.length; j++) {
-                if (projects[i].todos[j].title === name) {
-                    projects[i].todos.splice(j, 1);
+            for (let i = 0; i < projects.todos.length; i++) {
+                if (projects.todos[i].title === name) {
+                    projects.todos.splice(i, 1);
                     localStorage.setItem("projects", JSON.stringify(projects));
                 }
             }

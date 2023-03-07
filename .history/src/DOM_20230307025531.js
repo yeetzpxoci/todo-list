@@ -76,7 +76,7 @@ function removeTodos() {
     document.getElementById("todos").innerHTML = "";
 }
 
-function renderHTML() {
+function renderHTML(projects) {
     const contentDiv = document.createElement("div");
     contentDiv.id = "content"
 

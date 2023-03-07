@@ -1,7 +1,7 @@
-import { createProject, changeCurrentProject, createTodo, removeTodo} from "./app_logic";
+import { createProject, currentProject, changeCurrentProject, createTodo, removeTodo} from "./app_logic";
 
 function displayProjects() {
-    let projects = JSON.parse(localStorage.getItem("projects"));
+    let projects = localStorage.getItem("projects");
     for (let i = 0; i < projects.length; i++) {
         const newProject = document.createElement("p");
         newProject.className = "project-name";
@@ -20,7 +20,6 @@ function removeProjects() {
 }
 
 function displayTodos() {
-    let currentProject = JSON.parse(localStorage.getItem("currentProject"));
     for (let i = 0; i < currentProject.todos.length; i++) {
         const todo = document.createElement("div");
         todo.className = "todo";
@@ -76,7 +75,7 @@ function removeTodos() {
     document.getElementById("todos").innerHTML = "";
 }
 
-function renderHTML() {
+function renderHTML(projects) {
     const contentDiv = document.createElement("div");
     contentDiv.id = "content"
 

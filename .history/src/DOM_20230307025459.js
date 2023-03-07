@@ -20,7 +20,7 @@ function removeProjects() {
 }
 
 function displayTodos() {
-    let currentProject = JSON.parse(localStorage.getItem("currentProject"));
+    let currentProject = localStorage.getItem("currentProject");
     for (let i = 0; i < currentProject.todos.length; i++) {
         const todo = document.createElement("div");
         todo.className = "todo";
@@ -76,7 +76,7 @@ function removeTodos() {
     document.getElementById("todos").innerHTML = "";
 }
 
-function renderHTML() {
+function renderHTML(projects) {
     const contentDiv = document.createElement("div");
     contentDiv.id = "content"
 

@@ -5,6 +5,6 @@ if (JSON.parse(localStorage.getItem("projects")) == null) {
     initialize();
 }
 
-renderHTML();
+renderHTML(JSON.parse(localStorage.getItem("projects")));
 displayProjects();
 displayTodos();
