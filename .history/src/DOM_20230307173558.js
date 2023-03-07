@@ -1,4 +1,4 @@
-import { createProject, changeCurrentProject, createTodo, removeTodo, removeProject} from "./app_logic";
+import { createProject, changeCurrentProject, createTodo, removeTodo} from "./app_logic";
 
 function displayProjects() {
     let projects = JSON.parse(localStorage.getItem("projects"));
@@ -15,25 +15,14 @@ function displayProjects() {
 
         const projectRemoveButton = document.createElement("button");
         projectRemoveButton.className = "project-remove-button";
-        projectRemoveButton.innerHTML = "X";
         projectRemoveButton.addEventListener("click", function () {
-            removeProject(this.previousSibling.innerHTML);
-            changeCurrentProject("Default");
-            removeTodos();
-            displayTodos();
             this.parentElement.remove();
         });
 
         const newProjectDiv = document.createElement("div");
         newProjectDiv.className = "project-div"
 
-        if (projects[i].name === "Default") {
-            newProjectDiv.append(newProject);
-
-        } else {
-            newProjectDiv.append(newProject, projectRemoveButton);
-
-        }
+        newProjectDiv.append(newProject, projectRemoveButton);
 
         document.getElementById("projects-div").append(newProjectDiv);
     }

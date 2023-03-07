@@ -60,6 +60,7 @@ function createProject(name) {
 }
 
 function removeProject(name) {
+    let currentProject = JSON.parse(localStorage.getItem("defaultProject"))
     let projects = JSON.parse(localStorage.getItem("projects"));
     for (let i = 0; i < projects.length; i++) {
         if (projects[i].name === name) {

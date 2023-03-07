@@ -18,22 +18,13 @@ function displayProjects() {
         projectRemoveButton.innerHTML = "X";
         projectRemoveButton.addEventListener("click", function () {
             removeProject(this.previousSibling.innerHTML);
-            changeCurrentProject("Default");
-            removeTodos();
-            displayTodos();
             this.parentElement.remove();
         });
 
         const newProjectDiv = document.createElement("div");
         newProjectDiv.className = "project-div"
 
-        if (projects[i].name === "Default") {
-            newProjectDiv.append(newProject);
-
-        } else {
-            newProjectDiv.append(newProject, projectRemoveButton);
-
-        }
+        newProjectDiv.append(newProject, projectRemoveButton);
 
         document.getElementById("projects-div").append(newProjectDiv);
     }
@@ -125,6 +116,20 @@ function renderHTML() {
 
     const projectsDiv = document.createElement("div");
     projectsDiv.id = "projects-div";
+
+    const defaultProject = document.createElement("p");
+    defaultProject.className = "project-name";
+    defaultProject.innerHTML = JSON.parse(localStorage.getItem("defaultProject")).name;;
+    defaultProject.addEventListener("click", function () {
+        changeCurrentProject(defaultProject.innerHTML);
+        removeTodos();
+        displayTodos();
+    });
+
+    const defaultProjectDiv = document.createElement("div");
+    defaultProjectDiv.className = "project-div"
+    defaultProjectDiv.append(defaultProject);
+    projectsDiv.append(defaultProjectDiv);
 
     const addProject = document.createElement("button");
     addProject.id = "add-project";

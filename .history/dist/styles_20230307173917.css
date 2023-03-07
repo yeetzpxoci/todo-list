@@ -111,6 +111,7 @@ p {
 
 .project-remove-button {
     background-color: transparent;
+    color: #FFCBCB;
     border-radius: 8px;
     border-width: 0px;
     font-weight: bold;

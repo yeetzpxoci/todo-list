@@ -90,4 +90,4 @@ function initialize() {
     localStorage.setItem("currentProject", JSON.stringify(defaultProject));
 }
 
-export {todo, createTodo, removeTodo, project, createProject, removeProject, changeCurrentProject, initialize};
+export {todo, createTodo, removeTodo, project, createProject, removeProject changeCurrentProject, initialize};

@@ -105,17 +105,11 @@ p {
 .project-div {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 16px;
 }
 
 .project-remove-button {
-    background-color: transparent;
-    border-radius: 8px;
-    border-width: 0px;
-    font-weight: bold;
-    font-size: 32px;
-    cursor: pointer;
+    color: #FFCBCB;
 }
 
 #todos-wrapper {

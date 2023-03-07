@@ -17,23 +17,14 @@ function displayProjects() {
         projectRemoveButton.className = "project-remove-button";
         projectRemoveButton.innerHTML = "X";
         projectRemoveButton.addEventListener("click", function () {
-            removeProject(this.previousSibling.innerHTML);
-            changeCurrentProject("Default");
-            removeTodos();
-            displayTodos();
+            removeProject();
             this.parentElement.remove();
         });
 
         const newProjectDiv = document.createElement("div");
         newProjectDiv.className = "project-div"
 
-        if (projects[i].name === "Default") {
-            newProjectDiv.append(newProject);
-
-        } else {
-            newProjectDiv.append(newProject, projectRemoveButton);
-
-        }
+        newProjectDiv.append(newProject, projectRemoveButton);
 
         document.getElementById("projects-div").append(newProjectDiv);
     }

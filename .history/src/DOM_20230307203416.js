@@ -19,8 +19,6 @@ function displayProjects() {
         projectRemoveButton.addEventListener("click", function () {
             removeProject(this.previousSibling.innerHTML);
             changeCurrentProject("Default");
-            removeTodos();
-            displayTodos();
             this.parentElement.remove();
         });
 

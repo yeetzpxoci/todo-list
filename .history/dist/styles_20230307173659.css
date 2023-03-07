@@ -57,6 +57,8 @@ p {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     z-index: -1;
+    padding-left: 24px;
+    padding-top: 24px;
     border-radius: 16px;
 }
 
@@ -105,17 +107,11 @@ p {
 .project-div {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 16px;
 }
 
 .project-remove-button {
-    background-color: transparent;
-    border-radius: 8px;
-    border-width: 0px;
-    font-weight: bold;
-    font-size: 32px;
-    cursor: pointer;
+    color: #FFCBCB;
 }
 
 #todos-wrapper {

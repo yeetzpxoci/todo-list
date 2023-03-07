@@ -1,9 +1,8 @@
-import { createProject, changeCurrentProject, createTodo, removeTodo, removeProject} from "./app_logic";
+import { createProject, changeCurrentProject, createTodo, removeTodo} from "./app_logic";
 
 function displayProjects() {
     let projects = JSON.parse(localStorage.getItem("projects"));
     for (let i = 0; i < projects.length; i++) {
-        
         const newProject = document.createElement("p");
         newProject.className = "project-name";
         newProject.innerHTML = projects[i].name;
@@ -12,30 +11,7 @@ function displayProjects() {
             removeTodos();
             displayTodos();
         });
-
-        const projectRemoveButton = document.createElement("button");
-        projectRemoveButton.className = "project-remove-button";
-        projectRemoveButton.innerHTML = "X";
-        projectRemoveButton.addEventListener("click", function () {
-            removeProject(this.previousSibling.innerHTML);
-            changeCurrentProject("Default");
-            removeTodos();
-            displayTodos();
-            this.parentElement.remove();
-        });
-
-        const newProjectDiv = document.createElement("div");
-        newProjectDiv.className = "project-div"
-
-        if (projects[i].name === "Default") {
-            newProjectDiv.append(newProject);
-
-        } else {
-            newProjectDiv.append(newProject, projectRemoveButton);
-
-        }
-
-        document.getElementById("projects-div").append(newProjectDiv);
+        document.getElementById("projects-div").append(newProject);
     }
 }
 
@@ -91,12 +67,15 @@ function displayTodos() {
             this.previousElementSibling.style.display = "flex";
         });
 
-        if (currentProject.todos[i].priority === "High") {
-            todo.className = "todo-high";
-        } else if (currentProject.todos[i].priority === "Medium") {
-            todo.className = "todo-medium";
-        } else {
-            todo.className = "todo-low";
+        switch (currentProject.todos[i].priority) {
+            case "High":
+                todo.style.backgroundColor = "#FFCBCB";
+            case "Medium":
+                todo.style.backgroundColor = "#FFFDDE";
+            case "Low":
+                todo.style.backgroundColor = "#E7FBBE";
+            default:
+                break;
         }
 
         todo.append(checkbox, todoName, due, descriptionDiv, descriptionButton);

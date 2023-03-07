@@ -64,7 +64,6 @@ function removeProject(name) {
     for (let i = 0; i < projects.length; i++) {
         if (projects[i].name === name) {
             projects.splice(i, 1);
-            localStorage.setItem("projects", JSON.stringify(projects));
         }
     }
 }
@@ -90,4 +89,4 @@ function initialize() {
     localStorage.setItem("currentProject", JSON.stringify(defaultProject));
 }
 
-export {todo, createTodo, removeTodo, project, createProject, removeProject, changeCurrentProject, initialize};
+export {todo, createTodo, removeTodo, project, createProject, changeCurrentProject, initialize};

@@ -18,9 +18,6 @@ function displayProjects() {
         projectRemoveButton.innerHTML = "X";
         projectRemoveButton.addEventListener("click", function () {
             removeProject(this.previousSibling.innerHTML);
-            changeCurrentProject("Default");
-            removeTodos();
-            displayTodos();
             this.parentElement.remove();
         });
 
@@ -29,7 +26,6 @@ function displayProjects() {
 
         if (projects[i].name === "Default") {
             newProjectDiv.append(newProject);
-
         } else {
             newProjectDiv.append(newProject, projectRemoveButton);
 

@@ -111,11 +111,13 @@ p {
 
 .project-remove-button {
     background-color: transparent;
+    color: #FFCBCB;
+    width: 24px;
+    height: 24px;
     border-radius: 8px;
     border-width: 0px;
     font-weight: bold;
-    font-size: 32px;
-    cursor: pointer;
+    font-size: 24px;
 }
 
 #todos-wrapper {
