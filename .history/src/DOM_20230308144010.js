@@ -201,7 +201,7 @@ function renderHTML() {
 
     const todoDueInput = document.createElement("input");
     todoDueInput.id = "todo-due-input";
-    todoDueInput.type = "date";
+    todoDueInput.type = "text";
     todoDueInput.placeholder = "Due date";
 
     const todoPriorityInput = document.createElement("select");

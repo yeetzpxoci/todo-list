@@ -84,12 +84,14 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60%;
+    height: 100%;
     border-radius: 16px;
     padding-left: 16px;
     padding-right: 16px;
     font-size: 36px;
-    cursor: pointer;}
+    cursor: pointer;
+    background-color: aqua;
+}
 
 .project-name {
     font-size: 32px;

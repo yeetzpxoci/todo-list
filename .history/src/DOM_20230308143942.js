@@ -100,7 +100,7 @@ function displayTodos() {
         }
 
         todo.append(checkbox, todoName, due, descriptionDiv, descriptionButton);
-        document.getElementById("todos").insertBefore(todo, document.getElementById("add-todo"));
+        document.getElementById("todos").append(todo);
     }
 }
 
@@ -201,7 +201,7 @@ function renderHTML() {
 
     const todoDueInput = document.createElement("input");
     todoDueInput.id = "todo-due-input";
-    todoDueInput.type = "date";
+    todoDueInput.type = "text";
     todoDueInput.placeholder = "Due date";
 
     const todoPriorityInput = document.createElement("select");
