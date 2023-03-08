@@ -143,7 +143,7 @@ function renderHTML() {
 
     const addTodo = document.createElement("div");
     addTodo.id = "add-todo";
-    addTodo.innerHTML = "+";
+    addTodo.innerHTML = "Add todo";
     addTodo.addEventListener("click", function () {
         document.getElementById("new-todo-form").style.display = "flex";
     })

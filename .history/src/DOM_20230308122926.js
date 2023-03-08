@@ -100,7 +100,7 @@ function displayTodos() {
         }
 
         todo.append(checkbox, todoName, due, descriptionDiv, descriptionButton);
-        document.getElementById("todos").prepend(todo);
+        document.getElementById("todos").insert(todo, document.getElementById("add-todo"));
     }
 }
 
@@ -143,7 +143,7 @@ function renderHTML() {
 
     const addTodo = document.createElement("div");
     addTodo.id = "add-todo";
-    addTodo.innerHTML = "+";
+    addTodo.innerHTML = "Add todo";
     addTodo.addEventListener("click", function () {
         document.getElementById("new-todo-form").style.display = "flex";
     })
@@ -226,7 +226,6 @@ function renderHTML() {
         createTodo(title, description, dueDate, priority);
         this.parentElement.style.display = "none";
         removeTodos();
-        document.getElementById("todos").append(addTodo);
         displayTodos();
     })
 
