@@ -88,9 +88,8 @@ p {
     border-radius: 16px;
     padding-left: 16px;
     padding-right: 16px;
-    font-size: 20px;
-    cursor: pointer;
-}
+    font-size: 36px;
+    cursor: pointer;}
 
 .project-name {
     font-size: 32px;
