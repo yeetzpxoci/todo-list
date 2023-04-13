@@ -1,2 +1,2 @@
 # todo-list
-A todo 
+A todo list made with HTML, CSS and vanilla JavaScript.
