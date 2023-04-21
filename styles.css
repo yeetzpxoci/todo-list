@@ -144,6 +144,11 @@ p {
     overflow: scroll;
 }
 
+.todo-name {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .todo, .todo-high, .todo-medium, .todo-low {
     display: flex;
     justify-content: space-between;
