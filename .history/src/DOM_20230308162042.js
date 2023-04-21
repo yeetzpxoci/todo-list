@@ -163,6 +163,7 @@ function renderHTML() {
     const projectNameInput = document.createElement("input");
     projectNameInput.id = "project-name-input";
     projectNameInput.type = "text";
+    projectNameInput.name = "project-name"
     projectNameInput.placeholder = "Project name";
     projectNameInput.required = true;
 
@@ -170,12 +171,10 @@ function renderHTML() {
     projectNameSubmit.type = "submit";
     projectNameSubmit.value = "Add project"
     projectNameSubmit.addEventListener("click", function () {
-        if (document.getElementById("project-name-input").value !== "") {
-            createProject(document.getElementById("project-name-input").value);
-            removeProjects();
-            displayProjects();
-            this.parentElement.style.display = "none";
-        }
+        createProject(document.getElementById("project-name-input").value);
+        removeProjects();
+        displayProjects();
+        this.parentElement.style.display = "none";
     })
 
     newProjectForm.append(closeButtonProject, projectNameInput, projectNameSubmit);
@@ -195,7 +194,6 @@ function renderHTML() {
     todoTitleInput.id = "todo-input";
     todoTitleInput.type = "text";
     todoTitleInput.placeholder = "Title";
-    todoTitleInput.required = true;
 
     const todoDescriptionInput = document.createElement("input");
     todoDescriptionInput.id = "todo-input";
@@ -223,16 +221,14 @@ function renderHTML() {
     todoSubmit.value = "Add todo";
     todoSubmit.id = "todo-input"
     todoSubmit.addEventListener("click", function () {
-        if (document.getElementById("todo-input").value !== "") {
-            const title = todoTitleInput.value;
-            const description = todoDescriptionInput.value;
-            const dueDate = todoDueInput.value;
-            const priority = todoPriorityInput.value;
-            createTodo(title, description, dueDate, priority);
-            this.parentElement.style.display = "none";
-            removeTodos();
-            displayTodos();
-        }
+        const title = todoTitleInput.value;
+        const description = todoDescriptionInput.value;
+        const dueDate = todoDueInput.value;
+        const priority = todoPriorityInput.value;
+        createTodo(title, description, dueDate, priority);
+        this.parentElement.style.display = "none";
+        removeTodos();
+        displayTodos();
     })
 
     todoPriorityInput.append(highText, mediumText, lowText);

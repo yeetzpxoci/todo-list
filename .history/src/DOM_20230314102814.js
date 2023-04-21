@@ -178,6 +178,15 @@ function renderHTML() {
         }
     })
 
+    document.getElementById("new-project-form").onkeydown = function (e) {
+        if (e.keyCode == 13 && document.getElementById("new-project-form").style.display !== "none") {
+            createProject(document.getElementById("project-name-input").value);
+            removeProjects();
+            displayProjects();
+            document.getElementById("new-project-form").style.display = "none";
+        }
+    };
+
     newProjectForm.append(closeButtonProject, projectNameInput, projectNameSubmit);
 
     const closeButtonTodo = document.createElement("button");
@@ -234,6 +243,19 @@ function renderHTML() {
             displayTodos();
         }
     })
+
+    document.onkeydown = function (e) {
+        if (e.keyCode == 13 && document.getElementById("new-todo-form").style.display !== "none") {
+            const title = todoTitleInput.value;
+            const description = todoDescriptionInput.value;
+            const dueDate = todoDueInput.value;
+            const priority = todoPriorityInput.value;
+            createTodo(title, description, dueDate, priority);
+            document.getElementById("new-todo-form").style.display = "none";
+            removeTodos();
+            displayTodos();
+        }
+    };
 
     todoPriorityInput.append(highText, mediumText, lowText);
 

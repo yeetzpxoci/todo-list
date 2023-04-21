@@ -235,6 +235,12 @@ function renderHTML() {
         }
     })
 
+    document.onkeydown = function (e) {
+        if (e.keyCode == 13) {
+            document.getElementById("new-todo-form").submit();
+        }
+    };
+
     todoPriorityInput.append(highText, mediumText, lowText);
 
     newTodoForm.append(closeButtonTodo, todoTitleInput, todoDescriptionInput, todoDueInput, todoPriorityInput, todoSubmit);

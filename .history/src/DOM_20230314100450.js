@@ -221,7 +221,7 @@ function renderHTML() {
     const todoSubmit= document.createElement("input");
     todoSubmit.type = "submit";
     todoSubmit.value = "Add todo";
-    todoSubmit.id = "todo-input"
+    todoSubmit.id = "todo-submit"
     todoSubmit.addEventListener("click", function () {
         if (document.getElementById("todo-input").value !== "") {
             const title = todoTitleInput.value;
@@ -234,6 +234,19 @@ function renderHTML() {
             displayTodos();
         }
     })
+
+    document.getElementById("todo-submit").onkeydown = function (e) {
+        if (e.keyCode == 13 && document.getElementById("todo-input").value !== "") {
+            const title = todoTitleInput.value;
+            const description = todoDescriptionInput.value;
+            const dueDate = todoDueInput.value;
+            const priority = todoPriorityInput.value;
+            createTodo(title, description, dueDate, priority);
+            this.parentElement.style.display = "none";
+            removeTodos();
+            displayTodos();
+        }
+    };
 
     todoPriorityInput.append(highText, mediumText, lowText);
 

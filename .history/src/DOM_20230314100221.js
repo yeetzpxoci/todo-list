@@ -234,6 +234,11 @@ function renderHTML() {
             displayTodos();
         }
     })
+    todoSubmit.onkeydown = function (e) {
+        if (e.keyCode == 13) {
+            // submit
+        }
+    };
 
     todoPriorityInput.append(highText, mediumText, lowText);
 

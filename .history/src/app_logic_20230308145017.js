@@ -80,14 +80,14 @@ function changeCurrentProject(name) {
 
 function initialize() {
     localStorage.setItem("projects", JSON.stringify([]));
-    let homeProject = project("Home");
+    let homeProject = project("Default");
     localStorage.setItem("homeProject", JSON.stringify(homeProject));
     let projects = JSON.parse(localStorage.getItem("projects"));
 
-    projects.push(homeProject);
+    projects.push(defaultProject);
 
     localStorage.setItem("projects", JSON.stringify(projects));
-    localStorage.setItem("currentProject", JSON.stringify(homeProject));
+    localStorage.setItem("currentProject", JSON.stringify(defaultProject));
 }
 
 export {todo, createTodo, removeTodo, project, createProject, removeProject, changeCurrentProject, initialize};

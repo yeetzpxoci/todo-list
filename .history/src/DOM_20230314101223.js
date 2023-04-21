@@ -235,6 +235,12 @@ function renderHTML() {
         }
     })
 
+    document.onkeydown = function (e) {
+        if (e.keyCode == 13) {
+            alert("hi")
+        }
+    };
+
     todoPriorityInput.append(highText, mediumText, lowText);
 
     newTodoForm.append(closeButtonTodo, todoTitleInput, todoDescriptionInput, todoDueInput, todoPriorityInput, todoSubmit);

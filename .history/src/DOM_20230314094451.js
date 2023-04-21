@@ -175,7 +175,6 @@ function renderHTML() {
             removeProjects();
             displayProjects();
             this.parentElement.style.display = "none";
-        }
     })
 
     newProjectForm.append(closeButtonProject, projectNameInput, projectNameSubmit);
@@ -223,16 +222,14 @@ function renderHTML() {
     todoSubmit.value = "Add todo";
     todoSubmit.id = "todo-input"
     todoSubmit.addEventListener("click", function () {
-        if (document.getElementById("todo-input").value !== "") {
-            const title = todoTitleInput.value;
-            const description = todoDescriptionInput.value;
-            const dueDate = todoDueInput.value;
-            const priority = todoPriorityInput.value;
-            createTodo(title, description, dueDate, priority);
-            this.parentElement.style.display = "none";
-            removeTodos();
-            displayTodos();
-        }
+        const title = todoTitleInput.value;
+        const description = todoDescriptionInput.value;
+        const dueDate = todoDueInput.value;
+        const priority = todoPriorityInput.value;
+        createTodo(title, description, dueDate, priority);
+        this.parentElement.style.display = "none";
+        removeTodos();
+        displayTodos();
     })
 
     todoPriorityInput.append(highText, mediumText, lowText);

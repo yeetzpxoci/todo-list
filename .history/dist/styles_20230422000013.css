@@ -146,7 +146,7 @@ p {
 
 .todo-name {
     white-space: nowrap;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .todo, .todo-high, .todo-medium, .todo-low {

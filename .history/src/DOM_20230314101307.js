@@ -235,6 +235,19 @@ function renderHTML() {
         }
     })
 
+    document.onkeydown = function (e) {
+        if (e.keyCode == 13) {
+            const title = todoTitleInput.value;
+            const description = todoDescriptionInput.value;
+            const dueDate = todoDueInput.value;
+            const priority = todoPriorityInput.value;
+            createTodo(title, description, dueDate, priority);
+            this.parentElement.style.display = "none";
+            removeTodos();
+            displayTodos();
+        }
+    };
+
     todoPriorityInput.append(highText, mediumText, lowText);
 
     newTodoForm.append(closeButtonTodo, todoTitleInput, todoDescriptionInput, todoDueInput, todoPriorityInput, todoSubmit);

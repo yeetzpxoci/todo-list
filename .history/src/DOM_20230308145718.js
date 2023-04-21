@@ -3,6 +3,7 @@ import { createProject, changeCurrentProject, createTodo, removeTodo, removeProj
 function displayProjects() {
     let projects = JSON.parse(localStorage.getItem("projects"));
     for (let i = 0; i < projects.length; i++) {
+        
         const newProject = document.createElement("p");
         newProject.className = "project-name";
         newProject.innerHTML = projects[i].name;
@@ -17,7 +18,7 @@ function displayProjects() {
         projectRemoveButton.innerHTML = "X";
         projectRemoveButton.addEventListener("click", function () {
             removeProject(this.previousSibling.innerHTML);
-            changeCurrentProject("Home");
+            changeCurrentProject("Default");
             removeTodos();
             displayTodos();
             this.parentElement.remove();
@@ -26,7 +27,7 @@ function displayProjects() {
         const newProjectDiv = document.createElement("div");
         newProjectDiv.className = "project-div"
 
-        if (projects[i].name === "Home") {
+        if (projects[i].name === "Default") {
             newProjectDiv.append(newProject);
 
         } else {
@@ -43,15 +44,6 @@ function removeProjects() {
 }
 
 function displayTodos() {
-    const addTodo = document.createElement("div");
-    addTodo.id = "add-todo";
-    addTodo.innerHTML = "+ Add todo";
-    addTodo.addEventListener("click", function () {
-        document.getElementById("new-todo-form").style.display = "flex";
-    })
-
-    document.getElementById("todos").append(addTodo);
-
     let currentProject = JSON.parse(localStorage.getItem("currentProject"));
     for (let i = 0; i < currentProject.todos.length; i++) {
         const todo = document.createElement("div");
@@ -149,6 +141,15 @@ function renderHTML() {
     const todosDiv = document.createElement("div");
     todosDiv.id = "todos";
 
+    const addTodo = document.createElement("div");
+    addTodo.id = "add-todo";
+    addTodo.innerHTML = "+";
+    addTodo.addEventListener("click", function () {
+        document.getElementById("new-todo-form").style.display = "flex";
+    })
+
+    todosDiv.append(addTodo);
+
     const closeButtonProject = document.createElement("button");
     closeButtonProject.id = "close-button";
     closeButtonProject.innerHTML = "X";
@@ -164,18 +165,15 @@ function renderHTML() {
     projectNameInput.id = "project-name-input";
     projectNameInput.type = "text";
     projectNameInput.placeholder = "Project name";
-    projectNameInput.required = true;
 
     const projectNameSubmit = document.createElement("input");
     projectNameSubmit.type = "submit";
     projectNameSubmit.value = "Add project"
     projectNameSubmit.addEventListener("click", function () {
-        if (document.getElementById("project-name-input").value !== "") {
-            createProject(document.getElementById("project-name-input").value);
-            removeProjects();
-            displayProjects();
-            this.parentElement.style.display = "none";
-        }
+        createProject(document.getElementById("project-name-input").value);
+        removeProjects();
+        displayProjects();
+        this.parentElement.style.display = "none";
     })
 
     newProjectForm.append(closeButtonProject, projectNameInput, projectNameSubmit);
@@ -195,7 +193,6 @@ function renderHTML() {
     todoTitleInput.id = "todo-input";
     todoTitleInput.type = "text";
     todoTitleInput.placeholder = "Title";
-    todoTitleInput.required = true;
 
     const todoDescriptionInput = document.createElement("input");
     todoDescriptionInput.id = "todo-input";
@@ -208,7 +205,7 @@ function renderHTML() {
     todoDueInput.placeholder = "Due date";
 
     const todoPriorityInput = document.createElement("select");
-    todoPriorityInput.id = "todo-input";
+    todoPriorityInput.id = "todo-priority-input";
     todoPriorityInput.placeholder = "Due date";
 
     const lowText = document.createElement("option");
@@ -221,18 +218,16 @@ function renderHTML() {
     const todoSubmit= document.createElement("input");
     todoSubmit.type = "submit";
     todoSubmit.value = "Add todo";
-    todoSubmit.id = "todo-input"
     todoSubmit.addEventListener("click", function () {
-        if (document.getElementById("todo-input").value !== "") {
-            const title = todoTitleInput.value;
-            const description = todoDescriptionInput.value;
-            const dueDate = todoDueInput.value;
-            const priority = todoPriorityInput.value;
-            createTodo(title, description, dueDate, priority);
-            this.parentElement.style.display = "none";
-            removeTodos();
-            displayTodos();
-        }
+        const title = todoTitleInput.value;
+        const description = todoDescriptionInput.value;
+        const dueDate = todoDueInput.value;
+        const priority = todoPriorityInput.value;
+        createTodo(title, description, dueDate, priority);
+        this.parentElement.style.display = "none";
+        removeTodos();
+        document.getElementById("todos").append(addTodo);
+        displayTodos();
     })
 
     todoPriorityInput.append(highText, mediumText, lowText);

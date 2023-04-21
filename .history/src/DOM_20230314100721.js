@@ -221,7 +221,7 @@ function renderHTML() {
     const todoSubmit= document.createElement("input");
     todoSubmit.type = "submit";
     todoSubmit.value = "Add todo";
-    todoSubmit.id = "todo-input"
+    todoSubmit.id = "todo-submit"
     todoSubmit.addEventListener("click", function () {
         if (document.getElementById("todo-input").value !== "") {
             const title = todoTitleInput.value;

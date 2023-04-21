@@ -80,7 +80,7 @@ function changeCurrentProject(name) {
 
 function initialize() {
     localStorage.setItem("projects", JSON.stringify([]));
-    let homeProject = project("Home");
+    let homeProject = project("Default");
     localStorage.setItem("homeProject", JSON.stringify(homeProject));
     let projects = JSON.parse(localStorage.getItem("projects"));
 
